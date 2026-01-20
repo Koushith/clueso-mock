@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clueso - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Clueso</span>
+                </div>
+                
+                <button class="btn-primary-new">
+                    <i data-lucide="plus"></i>
+                    New video
+                </button>
+
+                <div class="search-container">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search..." class="search-input">
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="#" class="nav-item active">
+                        <i data-lucide="home"></i>
+                        Home
+                    </a>
+                    <a href="projects.html" class="nav-item">
+                        <i data-lucide="folder"></i>
+                        All Projects
+                    </a>
+                    <a href="templates.html" class="nav-item">
+                        <i data-lucide="layout-template"></i>
+                        Video Templates
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="zap"></i>
+                        Auto-update
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="users"></i>
+                        Team
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="bar-chart-2"></i>
+                        Analytics
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="nav-item">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="trash-2"></i>
+                    Trash
+                </a>
+                
+                <div class="user-profile">
+                    <div class="avatar">K</div>
+                    <div class="user-info">
+                        <span class="name">Koushith's Team</span>
+                        <span class="email">koushith97@gm...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Header -->
+            <header class="hero-section">
+                <div class="hero-content">
+                    <h1>Make something awesome</h1>
+                    <p>Create stunning product videos and docs</p>
+                </div>
+                <div class="hero-decoration"></div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Create Section -->
+                <section class="section">
+                    <div class="section-header">
+                        <i data-lucide="video"></i>
+                        <h2>Create a new video</h2>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card action-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="monitor"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Record screen</h3>
+                                <p>Turn a screen-recording into a studio-style video.</p>
+                            </div>
+                        </div>
+                        <div class="card action-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="upload-cloud"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Upload a video</h3>
+                                <p>Upload a screen recording. Get a studio-style video.</p>
+                            </div>
+                        </div>
+                        <div class="card action-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="presentation"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Upload a slide deck</h3>
+                                <p>Turn any PDF or PPT into a narrated video.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AI Tools Section -->
+                <section class="section">
+                    <div class="section-header">
+                        <i data-lucide="sparkles"></i>
+                        <h2>AI tools <span class="badge-new">NEW</span></h2>
+                    </div>
+                    <div class="cards-grid small-cards">
+                        <div class="card tool-card">
+                            <div class="tool-icon"><i data-lucide="scissors"></i></div>
+                            <div class="tool-info">
+                                <h3>Cuts</h3>
+                                <p>Break down long videos</p>
+                            </div>
+                        </div>
+                        <div class="card tool-card">
+                            <div class="tool-icon"><i data-lucide="zap"></i></div>
+                            <div class="tool-info">
+                                <h3>Auto-update</h3>
+                                <p>Update content instantly</p>
+                            </div>
+                        </div>
+                        <div class="card tool-card">
+                            <div class="tool-icon"><i data-lucide="languages"></i></div>
+                            <div class="tool-info">
+                                <h3>Translator</h3>
+                                <p>Dub into 37+ languages</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Projects -->
+                <section class="section">
+                    <h2>Recent projects</h2>
+                    <div class="projects-table-container">
+                        <table class="projects-table">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Creator</th>
+                                    <th>Updated</th>
+                                    <th>Created</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="project-name">
+                                            <div class="file-icon"></div>
+                                            Untitled (2)
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="creator-info">
+                                            <div class="avatar-small">K</div>
+                                            <span>Koushith</span>
+                                        </div>
+                                    </td>
+                                    <td>17 Jan 2026</td>
+                                    <td>9 Jan 2026</td>
+                                    <td><span class="status-badge">Unpublished</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="project-name">
+                                            <div class="file-icon"></div>
+                                            Verify Instantly
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="creator-info">
+                                            <div class="avatar-small">K</div>
+                                            <span>Koushith</span>
+                                        </div>
+                                    </td>
+                                    <td>9 Jan 2026</td>
+                                    <td>8 Jan 2026</td>
+                                    <td><span class="status-badge">Unpublished</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Getting Started Section -->
+                <section class="section">
+                    <h2>Getting started</h2>
+                    <div class="cards-grid two-columns">
+                        <div class="card media-card">
+                            <div class="card-media">
+                                <img src="https://web.clueso.io/assets/intro_to_clueso-Dg3IDdcF.png" alt="Intro to Clueso" class="bg-cover">
+                                <div class="play-button"><i data-lucide="play"></i></div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Introduction to Clueso</h3>
+                                <p>What is Clueso?</p>
+                            </div>
+                        </div>
+                        <div class="card media-card">
+                            <div class="card-media">
+                                <div class="play-button"><i data-lucide="play"></i></div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Create your first video</h3>
+                                <p>How to create a video</p>
+                            </div>
+                        </div>
+                        <div class="card action-row-card">
+                            <div class="row-icon-content">
+                                <div class="row-icon"><i data-lucide="users"></i></div>
+                                <div class="row-content">
+                                    <h3>Invite team members</h3>
+                                    <p>Create great content with your team</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary-small">Add users</button>
+                        </div>
+                        <div class="card action-row-card">
+                            <div class="row-icon-content">
+                                <div class="row-icon"><i data-lucide="help-circle"></i></div>
+                                <div class="row-content">
+                                    <h3>Visit our help center</h3>
+                                    <p>Learn how to use Clueso</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary-small">Learn more</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

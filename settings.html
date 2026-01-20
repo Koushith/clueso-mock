@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clueso - Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Sidebar (Navigation) -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Clueso</span>
+                </div>
+                
+                <button class="btn-primary-new">
+                    <i data-lucide="plus"></i>
+                    New video
+                </button>
+
+                <div class="search-container">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search..." class="search-input">
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item">
+                        <i data-lucide="home"></i>
+                        Home
+                    </a>
+                    <a href="projects.html" class="nav-item">
+                        <i data-lucide="folder"></i>
+                        All Projects
+                    </a>
+                    <a href="templates.html" class="nav-item">
+                        <i data-lucide="layout-template"></i>
+                        Video Templates
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="zap"></i>
+                        Auto-update
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="users"></i>
+                        Team
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="bar-chart-2"></i>
+                        Analytics
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="trash-2"></i>
+                    Trash
+                </a>
+                
+                <div class="user-profile">
+                    <div class="avatar">K</div>
+                    <div class="user-info">
+                        <span class="name">Koushith's Team</span>
+                        <span class="email">koushith97@gm...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Settings Hero -->
+            <header class="hero-section settings-hero">
+                <div class="hero-content">
+                    <h1>Settings</h1>
+                    <p>Manage your account, team, and video preferences.</p>
+                </div>
+            </header>
+
+            <div class="content-wrapper settings-wrapper">
+                <!-- Group 1: Account & Profile -->
+                <section class="settings-section">
+                    <h3 class="settings-group-title">Personal settings</h3>
+                    <div class="settings-grid">
+                        <!-- Profile -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>My Profile</h4>
+                                <p>Manage your personal details, password, and avatar.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Notifications -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="bell"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Notifications</h4>
+                                <p>Choose what we get in touch with you about.</p>
+                            </div>
+                        </div>
+
+                        <!-- Security -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Security</h4>
+                                <p>2FA, login sessions, and password management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Group 2: Team & Workspace -->
+                <section class="settings-section">
+                    <h3 class="settings-group-title">Member settings</h3>
+                    <div class="settings-grid">
+                        <!-- Team -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Team Members</h4>
+                                <p>Invite colleagues and manage roles/permissions.</p>
+                            </div>
+                        </div>
+
+                        <!-- Billing -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="credit-card"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Billing & Plans</h4>
+                                <p>Manage your subscription and payment methods.</p>
+                            </div>
+                        </div>
+
+                        <!-- General -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Workspace General</h4>
+                                <p>Workspace name, logo, and branding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Group 3: Video Configuration -->
+                <section class="settings-section">
+                    <h3 class="settings-group-title">Video configuration</h3>
+                    <div class="settings-grid">
+                        <!-- Defaults -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="sliders"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Default Settings</h4>
+                                <p>Set default privacy, recording quality, and zoom prefs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Player -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="play-circle"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Customize Player</h4>
+                                <p>Brand your video player colors and controls.</p>
+                            </div>
+                        </div>
+
+                        <!-- Localization -->
+                        <div class="card setting-card">
+                            <div class="setting-icon-wrapper">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <div class="setting-info">
+                                <h4>Localization</h4>
+                                <p>Manage languages, translations on auto-detect.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

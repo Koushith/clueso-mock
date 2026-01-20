@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clueso - Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Clueso</span>
+                </div>
+                
+                <button class="btn-primary-new">
+                    <i data-lucide="plus"></i>
+                    New video
+                </button>
+
+                <div class="search-container">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search..." class="search-input">
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item">
+                        <i data-lucide="home"></i>
+                        Home
+                    </a>
+                    <a href="projects.html" class="nav-item">
+                        <i data-lucide="folder"></i>
+                        All Projects
+                    </a>
+                    <a href="templates.html" class="nav-item">
+                        <i data-lucide="layout-template"></i>
+                        Video Templates
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="zap"></i>
+                        Auto-update
+                    </a>
+                    <a href="#" class="nav-item active">
+                        <i data-lucide="users"></i>
+                        Team
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="bar-chart-2"></i>
+                        Analytics
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="nav-item">
+                    <i data-lucide="settings"></i>
+                    Settings
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="trash-2"></i>
+                    Trash
+                </a>
+                
+                <div class="user-profile">
+                    <div class="avatar">K</div>
+                    <div class="user-info">
+                        <span class="name">Koushith's Team</span>
+                        <span class="email">koushith97@gm...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Team Hero -->
+            <header class="hero-section team-hero">
+                <div class="hero-content">
+                    <h1>Team & Permissions</h1>
+                    <p>Manage your workspace members and their access levels.</p>
+                </div>
+                <button class="btn-primary-new btn-invite">
+                    <i data-lucide="user-plus"></i> Invite Member
+                </button>
+            </header>
+
+            <div class="content-wrapper team-wrapper">
+                
+                <!-- Invite Section (Visual) -->
+                <div class="invite-panel">
+                    <div class="invite-input-wrapper">
+                        <i data-lucide="mail"></i>
+                        <input type="email" placeholder="Enter email addresses (comma separated)..." class="invite-input">
+                    </div>
+                    <select class="role-select">
+                        <option value="editor">Editor</option>
+                        <option value="admin">Admin</option>
+                        <option value="viewer">Viewer</option>
+                    </select>
+                    <button class="btn-secondary-small btn-send-invite">Send Invite</button>
+                </div>
+
+                <!-- Members List -->
+                <div class="members-section">
+                    <h3 class="section-title">Active Members <span class="count-badge">4</span></h3>
+                    
+                    <div class="members-list">
+                        <!-- Member 1 (You) -->
+                        <div class="member-row">
+                            <div class="member-info">
+                                <div class="avatar-large">K</div>
+                                <div class="member-details">
+                                    <span class="member-name">Koushith Amin <span class="badge-you">You</span></span>
+                                    <span class="member-email">koushith97@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="member-role">
+                                <span class="role-tag admin">Owner</span>
+                            </div>
+                            <div class="member-status">
+                                <span class="status-text active">Active</span>
+                            </div>
+                            <div class="member-actions">
+                                <!-- No actions for self usually -->
+                            </div>
+                        </div>
+
+                        <!-- Member 2 -->
+                        <div class="member-row">
+                            <div class="member-info">
+                                <div class="avatar-large" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">S</div>
+                                <div class="member-details">
+                                    <span class="member-name">Sarah Jenkins</span>
+                                    <span class="member-email">sarah.j@clueso.io</span>
+                                </div>
+                            </div>
+                            <div class="member-role">
+                                <select class="role-dropdown">
+                                    <option>Admin</option>
+                                    <option selected>Editor</option>
+                                    <option>Viewer</option>
+                                </select>
+                            </div>
+                            <div class="member-status">
+                                <span class="status-text active">Active</span>
+                            </div>
+                            <div class="member-actions">
+                                <button class="icon-btn"><i data-lucide="more-vertical"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Member 3 -->
+                        <div class="member-row">
+                            <div class="member-info">
+                                <div class="avatar-large" style="background: linear-gradient(135deg, #f59e0b, #d97706);">M</div>
+                                <div class="member-details">
+                                    <span class="member-name">Mike Ross</span>
+                                    <span class="member-email">mike.r@clueso.io</span>
+                                </div>
+                            </div>
+                            <div class="member-role">
+                                <select class="role-dropdown">
+                                    <option>Admin</option>
+                                    <option selected>Editor</option>
+                                    <option>Viewer</option>
+                                </select>
+                            </div>
+                            <div class="member-status">
+                                <span class="status-text active">Active</span>
+                            </div>
+                            <div class="member-actions">
+                                <button class="icon-btn"><i data-lucide="more-vertical"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Member 4 -->
+                        <div class="member-row">
+                            <div class="member-info">
+                                <div class="avatar-large" style="background: linear-gradient(135deg, #10b981, #059669);">A</div>
+                                <div class="member-details">
+                                    <span class="member-name">Alex Chen</span>
+                                    <span class="member-email">alex.c@clueso.io</span>
+                                </div>
+                            </div>
+                            <div class="member-role">
+                                <select class="role-dropdown">
+                                    <option>Admin</option>
+                                    <option>Editor</option>
+                                    <option selected>Viewer</option>
+                                </select>
+                            </div>
+                            <div class="member-status">
+                                <span class="status-text active">Active</span>
+                            </div>
+                            <div class="member-actions">
+                                <button class="icon-btn"><i data-lucide="more-vertical"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Invites -->
+                <div class="members-section">
+                    <h3 class="section-title">Pending Invitations <span class="count-badge">1</span></h3>
+                     <div class="members-list">
+                        <!-- Pending Member 1 -->
+                        <div class="member-row pending">
+                            <div class="member-info">
+                                <div class="avatar-large pending-avatar"><i data-lucide="mail"></i></div>
+                                <div class="member-details">
+                                    <span class="member-name">david.w@clueso.io</span>
+                                    <span class="member-email">Invitation sent 2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="member-role">
+                                <span class="role-text">Editor</span>
+                            </div>
+                            <div class="member-status">
+                                <span class="status-text pending">Pending</span>
+                            </div>
+                            <div class="member-actions">
+                                <button class="btn-secondary-small">Resend</button>
+                                <button class="icon-btn"><i data-lucide="trash-2"></i></button>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
