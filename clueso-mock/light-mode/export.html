@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clueso - Exporting...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span>Clueso</span>
+                </div>
+                
+                <button class="btn-primary-new">
+                    <i data-lucide="plus"></i>
+                    New video
+                </button>
+
+                <div class="search-container">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Search..." class="search-input">
+                </div>
+
+                <nav class="nav-menu">
+                    
+                <div class="user-profile">
+                    <div class="avatar">K</div>
+                    <div class="user-info">
+                        <span class="name">Koushith's Team</span>
+                        <span class="email">koushith97@gm...</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content (Dashboard Background) -->
+        <main class="main-content">
+            <!-- Hero Header -->
+            <header class="hero-section">
+                <div class="hero-content">
+                    <h1>Make something awesome</h1>
+                    <p>Create stunning product videos and docs</p>
+                </div>
+                <div class="hero-decoration"></div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Create Section -->
+                <section class="section">
+                    <div class="section-header">
+                        <i data-lucide="video"></i>
+                        <h2>Create a new video</h2>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="card action-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="monitor"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Record screen</h3>
+                                <p>Turn a screen-recording into a studio-style video.</p>
+                            </div>
+                        </div>
+                        <div class="card action-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="upload-cloud"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Upload a video</h3>
+                                <p>Upload a screen recording. Get a studio-style video.</p>
+                            </div>
+                        </div>
+                        <div class="card action-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="presentation"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Upload a slide deck</h3>
+                                <p>Turn any PDF or PPT into a narrated video.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Recent Projects -->
+                <section class="section">
+                    <h2>Recent projects</h2>
+                    <div class="projects-table-container">
+                        <table class="projects-table">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Creator</th>
+                                    <th>Updated</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="project-name">
+                                            <div class="file-icon"></div>
+                                            Untitled (2)
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="creator-info">
+                                            <div class="avatar-small">K</div>
+                                            <span>Koushith</span>
+                                        </div>
+                                    </td>
+                                    <td>Just now</td>
+                                    <td><span class="status-badge">Processing...</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- EXPORT WIDGET OVERLAY -->
+    <div class="export-widget-container">
+        <div class="export-card">
+            <!-- Minimized View -->
+            <div class="mini-progress">
+                <div class="spinner"></div>
+                <div class="mini-text">Exporting <span>0%</span></div>
+            </div>
+
+            <!-- Expanded View -->
+            <div class="export-header">
+                <div class="export-title">
+                    <i data-lucide="loader-2" style="animation: spin 2s linear infinite;"></i>
+                    Export in progress
+                </div>
+                <button class="minimize-btn" title="Minimize">
+                    <i data-lucide="minus"></i>
+                </button>
+            </div>
+
+            <div class="export-content">
+                <div class="status-row">
+                    <div class="preview-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=100&auto=format&fit=crop" alt="Thumbnail">
+                    </div>
+                    <div class="status-info">
+                        <h4 class="status-title">Rendering your video</h4>
+                        <p>Estimated time: 15s</p>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span>Progress</span>
+                        <span class="percentage-text">0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="export-actions">
+                    <button class="btn-cancel">Cancel</button>
+                    <button class="btn-view">View Video</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const card = document.querySelector('.export-card');
+        const minimizeBtn = document.querySelector('.minimize-btn');
+        const progressFill = document.querySelector('.progress-fill');
+        const percentageText = document.querySelector('.percentage-text');
+        const btnView = document.querySelector('.btn-view');
+        const statusTitle = document.querySelector('.status-title');
+        const miniText = document.querySelector('.mini-text');
+        const spinner = document.querySelector('.spinner');
+        const titleIcon = document.querySelector('.export-title i');
+        const cancelBtn = document.querySelector('.btn-cancel');
+
+        let progress = 0;
+        let isPaused = false;
+
+        // Toggle Minimized
+        minimizeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            card.classList.add('minimized');
+        });
+
+        // Click to expand (if minimized)
+        card.addEventListener('click', (e) => {
+            if (card.classList.contains('minimized')) {
+                card.classList.remove('minimized');
+            }
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            if (confirm("Cancel export?")) {
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Simulate Progress
+        function simulate() {
+            if (progress >= 100) {
+                // Complete State
+                progress = 100;
+                updateUI();
+                
+                statusTitle.textContent = "Video is ready!";
+                miniText.innerHTML = "Video ready";
+                btnView.classList.add('ready');
+                
+                // Stop animations
+                spinner.style.borderTopColor = '#10b981';
+                spinner.style.animation = 'none';
+                titleIcon.style.opacity = '0'; // Hide spinner in title
+                
+                // Replace title icon with check
+                const checkIcon = document.createElement('i');
+                checkIcon.setAttribute('data-lucide', 'check-circle');
+                checkIcon.style.color = '#10b981';
+                document.querySelector('.export-title').insertBefore(checkIcon, titleIcon);
+                titleIcon.remove();
+                lucide.createIcons();
+
+                return;
+            }
+
+            // Variable speed simulation
+            const increment = Math.random() * 1.5; 
+            progress += increment;
+            if (progress > 100) progress = 100;
+
+            updateUI();
+            requestAnimationFrame(() => {
+                setTimeout(simulate, 30 + Math.random() * 50);
+            });
+        }
+
+        function updateUI() {
+            const pct = Math.round(progress);
+            progressFill.style.width = `${pct}%`;
+            percentageText.textContent = `${pct}%`;
+            miniText.innerHTML = `Exporting <span>${pct}%</span>`;
+        }
+
+        // Start simulation after a small delay
+        setTimeout(simulate, 800);
+    </script>
+</body>
+</html>
