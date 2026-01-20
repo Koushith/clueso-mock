@@ -43,6 +43,10 @@
                         <i data-lucide="layout-template"></i>
                         Video Templates
                     </a>
+                    <a href="#" class="nav-item" id="btn-trigger-export">
+                        <i data-lucide="play-circle"></i>
+                        Simulate Export
+                    </a>
                     <a href="#" class="nav-item">
                         <i data-lucide="zap"></i>
                         Auto-update
@@ -209,6 +213,200 @@
     </div>
     <script>
         lucide.createIcons();
+    </script>
+    <!-- EXPORT WIDGET OVERLAY -->
+    <div class="export-widget-container" style="display: none;">
+        <div class="export-card">
+            <!-- Minimized View -->
+            <div class="mini-progress">
+                <div class="spinner"></div>
+                <div class="mini-text">Exporting <span>0%</span></div>
+            </div>
+
+            <!-- Expanded View -->
+            <div class="export-header">
+                <div class="export-title">
+                    <i data-lucide="loader-2" class="spin-icon"></i>
+                    Export in progress
+                </div>
+                <button class="minimize-btn" title="Minimize">
+                    <i data-lucide="minus"></i>
+                </button>
+            </div>
+
+            <div class="export-content">
+                <div class="status-row">
+                    <div class="preview-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=100&auto=format&fit=crop" alt="Thumbnail">
+                    </div>
+                    <div class="status-info">
+                        <h4 class="status-title">Rendering your video</h4>
+                        <p>Estimated time: 15s</p>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span>Progress</span>
+                        <span class="percentage-text">0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="export-actions">
+                    <button class="btn-cancel">Cancel</button>
+                    <button class="btn-view">View Video</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Export Widget Logic
+        const triggerBtn = document.getElementById('btn-trigger-export');
+        const widgetContainer = document.querySelector('.export-widget-container');
+        const card = document.querySelector('.export-card');
+        const minimizeBtn = document.querySelector('.minimize-btn');
+        const progressFill = document.querySelector('.progress-fill');
+        const percentageText = document.querySelector('.percentage-text');
+        const btnView = document.querySelector('.btn-view');
+        const statusTitle = document.querySelector('.status-title');
+        const miniText = document.querySelector('.mini-text');
+        const spinner = document.querySelector('.spinner');
+        const titleIcon = document.querySelector('.spin-icon');
+        const cancelBtn = document.querySelector('.btn-cancel');
+        const exportTitle = document.querySelector('.export-title');
+
+        let progress = 0;
+        let isSimulating = false;
+        let animationFrame;
+
+        // Trigger Export
+        if (triggerBtn) {
+            triggerBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (isSimulating) return; // Already running
+                
+                resetExport();
+                widgetContainer.style.display = 'block';
+                card.classList.remove('minimized');
+                isSimulating = true;
+                simulate();
+            });
+        }
+
+        // Toggle Minimized
+        if (minimizeBtn) {
+            minimizeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                card.classList.add('minimized');
+            });
+        }
+
+        // Click to expand (if minimized)
+        if (card) {
+            card.addEventListener('click', (e) => {
+                if (card.classList.contains('minimized')) {
+                    card.classList.remove('minimized');
+                }
+            });
+        }
+
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                widgetContainer.style.display = 'none';
+                isSimulating = false;
+                cancelAnimationFrame(animationFrame);
+            });
+        }
+
+        if (btnView) {
+            btnView.addEventListener('click', () => {
+                 alert("Opening video...");
+                 widgetContainer.style.display = 'none';
+            });
+        }
+
+        function resetExport() {
+            progress = 0;
+            statusTitle.textContent = "Rendering your video";
+            miniText.innerHTML = "Exporting <span>0%</span>";
+            progressFill.style.width = '0%';
+            percentageText.textContent = '0%';
+            btnView.classList.remove('ready');
+            
+            // Reset icons
+            spinner.style.borderTopColor = 'var(--brand-primary)';
+            spinner.style.animation = 'spin 1s linear infinite';
+            
+            // Fix title icon if it was replaced
+            const existingCheck = exportTitle.querySelector('[data-lucide="check-circle"]');
+            if (existingCheck) existingCheck.remove();
+            
+            if (!exportTitle.contains(titleIcon)) {
+                exportTitle.innerHTML = '<i data-lucide="loader-2" class="spin-icon"></i> Export in progress';
+                lucide.createIcons();
+            } else {
+                titleIcon.style.opacity = '1';
+                titleIcon.style.animation = 'spin 2s linear infinite';
+            }
+        }
+
+        function simulate() {
+            if (!isSimulating) return;
+
+            if (progress >= 100) {
+                // Complete State
+                progress = 100;
+                updateUI();
+                
+                statusTitle.textContent = "Video is ready!";
+                miniText.innerHTML = "Video ready";
+                btnView.classList.add('ready');
+                
+                // Stop animations
+                spinner.style.borderTopColor = '#10b981';
+                spinner.style.animation = 'none';
+                
+                // Keep title simple for now to avoid complex dom manipulation errors in simulation
+                const icon = exportTitle.querySelector('i');
+                if(icon) icon.style.opacity = '0'; 
+                
+                if(!exportTitle.querySelector('[data-lucide="check-circle"]')) {
+                    const checkIcon = document.createElement('i');
+                    checkIcon.setAttribute('data-lucide', 'check-circle');
+                    checkIcon.style.color = '#10b981';
+                    exportTitle.insertBefore(checkIcon, exportTitle.firstChild);
+                    if(icon) icon.remove();
+                    lucide.createIcons();
+                }
+
+                isSimulating = false;
+                return;
+            }
+
+            // Variable speed simulation
+            const increment = Math.random() * 0.8; 
+            progress += increment;
+            if (progress > 100) progress = 100;
+
+            updateUI();
+            
+            animationFrame = requestAnimationFrame(() => {
+                setTimeout(simulate, 30 + Math.random() * 50);
+            });
+        }
+
+        function updateUI() {
+            const pct = Math.round(progress);
+            progressFill.style.width = `${pct}%`;
+            percentageText.textContent = `${pct}%`;
+            miniText.innerHTML = `Exporting <span>${pct}%</span>`;
+        }
     </script>
 </body>
 </html>

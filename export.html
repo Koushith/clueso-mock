@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clueso - Dashboard</title>
+    <title>Clueso - Exporting...</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
                 </div>
 
                 <nav class="nav-menu">
-                    <a href="#" class="nav-item active">
+                    <a href="index.html" class="nav-item">
                         <i data-lucide="home"></i>
                         Home
                     </a>
@@ -42,10 +42,6 @@
                     <a href="templates.html" class="nav-item">
                         <i data-lucide="layout-template"></i>
                         Video Templates
-                    </a>
-                    <a href="#" class="nav-item" id="btn-trigger-export">
-                        <i data-lucide="play-circle"></i>
-                        Simulate Export
                     </a>
                     <a href="#" class="nav-item">
                         <i data-lucide="zap"></i>
@@ -82,7 +78,7 @@
             </div>
         </aside>
 
-        <!-- Main Content -->
+        <!-- Main Content (Dashboard Background) -->
         <main class="main-content">
             <!-- Hero Header -->
             <header class="hero-section">
@@ -130,38 +126,7 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- AI Tools Section -->
-                <section class="section">
-                    <div class="section-header">
-                        <i data-lucide="sparkles"></i>
-                        <h2>AI tools <span class="badge-new">NEW</span></h2>
-                    </div>
-                    <div class="cards-grid small-cards">
-                        <div class="card tool-card">
-                            <div class="tool-icon"><i data-lucide="scissors"></i></div>
-                            <div class="tool-info">
-                                <h3>Cuts</h3>
-                                <p>Break down long videos</p>
-                            </div>
-                        </div>
-                        <div class="card tool-card">
-                            <div class="tool-icon"><i data-lucide="zap"></i></div>
-                            <div class="tool-info">
-                                <h3>Auto-update</h3>
-                                <p>Update content instantly</p>
-                            </div>
-                        </div>
-                        <div class="card tool-card">
-                            <div class="tool-icon"><i data-lucide="languages"></i></div>
-                            <div class="tool-info">
-                                <h3>Translator</h3>
-                                <p>Dub into 37+ languages</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+                
                 <!-- Recent Projects -->
                 <section class="section">
                     <h2>Recent projects</h2>
@@ -172,7 +137,6 @@
                                     <th>Project</th>
                                     <th>Creator</th>
                                     <th>Updated</th>
-                                    <th>Created</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
@@ -190,85 +154,19 @@
                                             <span>Koushith</span>
                                         </div>
                                     </td>
-                                    <td>17 Jan 2026</td>
-                                    <td>9 Jan 2026</td>
-                                    <td><span class="status-badge">Unpublished</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="project-name">
-                                            <div class="file-icon"></div>
-                                            Verify Instantly
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="creator-info">
-                                            <div class="avatar-small">K</div>
-                                            <span>Koushith</span>
-                                        </div>
-                                    </td>
-                                    <td>9 Jan 2026</td>
-                                    <td>8 Jan 2026</td>
-                                    <td><span class="status-badge">Unpublished</span></td>
+                                    <td>Just now</td>
+                                    <td><span class="status-badge">Processing...</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
-
-                <!-- Getting Started Section -->
-                <section class="section">
-                    <h2>Getting started</h2>
-                    <div class="cards-grid two-columns">
-                        <div class="card media-card">
-                            <div class="card-media">
-                                <img src="https://web.clueso.io/assets/intro_to_clueso-Dg3IDdcF.png" alt="Intro to Clueso" class="bg-cover">
-                                <div class="play-button"><i data-lucide="play"></i></div>
-                            </div>
-                            <div class="card-content">
-                                <h3>Introduction to Clueso</h3>
-                                <p>What is Clueso?</p>
-                            </div>
-                        </div>
-                        <div class="card media-card">
-                            <div class="card-media">
-                                <div class="play-button"><i data-lucide="play"></i></div>
-                            </div>
-                            <div class="card-content">
-                                <h3>Create your first video</h3>
-                                <p>How to create a video</p>
-                            </div>
-                        </div>
-                        <div class="card action-row-card">
-                            <div class="row-icon-content">
-                                <div class="row-icon"><i data-lucide="users"></i></div>
-                                <div class="row-content">
-                                    <h3>Invite team members</h3>
-                                    <p>Create great content with your team</p>
-                                </div>
-                            </div>
-                            <button class="btn-secondary-small">Add users</button>
-                        </div>
-                        <div class="card action-row-card">
-                            <div class="row-icon-content">
-                                <div class="row-icon"><i data-lucide="help-circle"></i></div>
-                                <div class="row-content">
-                                    <h3>Visit our help center</h3>
-                                    <p>Learn how to use Clueso</p>
-                                </div>
-                            </div>
-                            <button class="btn-secondary-small">Learn more</button>
-                        </div>
-                    </div>
-                </section>
             </div>
         </main>
     </div>
-    <script>
-        lucide.createIcons();
-    </script>
+
     <!-- EXPORT WIDGET OVERLAY -->
-    <div class="export-widget-container" style="display: none;">
+    <div class="export-widget-container">
         <div class="export-card">
             <!-- Minimized View -->
             <div class="mini-progress">
@@ -279,7 +177,7 @@
             <!-- Expanded View -->
             <div class="export-header">
                 <div class="export-title">
-                    <i data-lucide="loader-2" class="spin-icon"></i>
+                    <i data-lucide="loader-2" style="animation: spin 2s linear infinite;"></i>
                     Export in progress
                 </div>
                 <button class="minimize-btn" title="Minimize">
@@ -319,9 +217,6 @@
     <script>
         lucide.createIcons();
 
-        // Export Widget Logic
-        const triggerBtn = document.getElementById('btn-trigger-export');
-        const widgetContainer = document.querySelector('.export-widget-container');
         const card = document.querySelector('.export-card');
         const minimizeBtn = document.querySelector('.minimize-btn');
         const progressFill = document.querySelector('.progress-fill');
@@ -330,25 +225,11 @@
         const statusTitle = document.querySelector('.status-title');
         const miniText = document.querySelector('.mini-text');
         const spinner = document.querySelector('.spinner');
-        const titleIcon = document.querySelector('.spin-icon');
+        const titleIcon = document.querySelector('.export-title i');
         const cancelBtn = document.querySelector('.btn-cancel');
-        const exportTitle = document.querySelector('.export-title');
 
         let progress = 0;
-        let isSimulating = false;
-        let animationFrame;
-
-        // Trigger Export
-        triggerBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (isSimulating) return; // Already running
-            
-            resetExport();
-            widgetContainer.style.display = 'block';
-            card.classList.remove('minimized');
-            isSimulating = true;
-            simulate();
-        });
+        let isPaused = false;
 
         // Toggle Minimized
         minimizeBtn.addEventListener('click', (e) => {
@@ -364,48 +245,13 @@
         });
 
         cancelBtn.addEventListener('click', () => {
-            widgetContainer.style.display = 'none';
-            isSimulating = false;
-            cancelAnimationFrame(animationFrame);
-        });
-
-        btnView.addEventListener('click', () => {
-             alert("Opening video...");
-             widgetContainer.style.display = 'none';
-        });
-
-        function resetExport() {
-            progress = 0;
-            statusTitle.textContent = "Rendering your video";
-            miniText.innerHTML = "Exporting <span>0%</span>";
-            progressFill.style.width = '0%';
-            percentageText.textContent = '0%';
-            btnView.classList.remove('ready');
-            
-            // Reset icons
-            spinner.style.borderTopColor = 'var(--brand-primary)';
-            spinner.style.animation = 'spin 1s linear infinite';
-            
-            // Fix title icon if it was replaced
-            const existingCheck = exportTitle.querySelector('[data-lucide="check-circle"]');
-            if (existingCheck) existingCheck.remove();
-            
-            if (!exportTitle.contains(titleIcon)) {
-                // If titleIcon was removed, recreate/re-append it
-                // Simplest is to just ensure titleIcon is visible if it's there, 
-                // but since I messed with DOM in previous code, let's be safe.
-                // We'll just reset the innerHTML of exportTitle
-                exportTitle.innerHTML = '<i data-lucide="loader-2" class="spin-icon"></i> Export in progress';
-                lucide.createIcons();
-            } else {
-                titleIcon.style.opacity = '1';
-                titleIcon.style.animation = 'spin 2s linear infinite';
+            if (confirm("Cancel export?")) {
+                window.location.href = 'index.html';
             }
-        }
+        });
 
+        // Simulate Progress
         function simulate() {
-            if (!isSimulating) return;
-
             if (progress >= 100) {
                 // Complete State
                 progress = 100;
@@ -418,33 +264,26 @@
                 // Stop animations
                 spinner.style.borderTopColor = '#10b981';
                 spinner.style.animation = 'none';
+                titleIcon.style.opacity = '0'; // Hide spinner in title
                 
-                // Update Title
-                const icon = exportTitle.querySelector('i'); // Re-select in case of DOM churn
-                if(icon) icon.style.opacity = '0'; 
-                
-                // Replace title icon with check (if not already there)
-                if(!exportTitle.querySelector('[data-lucide="check-circle"]')) {
-                    const checkIcon = document.createElement('i');
-                    checkIcon.setAttribute('data-lucide', 'check-circle');
-                    checkIcon.style.color = '#10b981';
-                    exportTitle.insertBefore(checkIcon, exportTitle.firstChild);
-                    if(icon) icon.remove(); // Remove the spinner
-                    lucide.createIcons();
-                }
+                // Replace title icon with check
+                const checkIcon = document.createElement('i');
+                checkIcon.setAttribute('data-lucide', 'check-circle');
+                checkIcon.style.color = '#10b981';
+                document.querySelector('.export-title').insertBefore(checkIcon, titleIcon);
+                titleIcon.remove();
+                lucide.createIcons();
 
-                isSimulating = false;
                 return;
             }
 
             // Variable speed simulation
-            const increment = Math.random() * 0.8; 
+            const increment = Math.random() * 1.5; 
             progress += increment;
             if (progress > 100) progress = 100;
 
             updateUI();
-            
-            animationFrame = requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
                 setTimeout(simulate, 30 + Math.random() * 50);
             });
         }
@@ -455,6 +294,9 @@
             percentageText.textContent = `${pct}%`;
             miniText.innerHTML = `Exporting <span>${pct}%</span>`;
         }
+
+        // Start simulation after a small delay
+        setTimeout(simulate, 800);
     </script>
 </body>
 </html>
